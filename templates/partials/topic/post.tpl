@@ -58,7 +58,7 @@
 				<span class="bookmarked opacity-0 text-primary"><i class="fa fa-bookmark-o"></i></span>
 				<a href="{config.relative_path}/post/{./pid}" class="post-index text-muted d-none d-md-inline">
 					{{{ if endorsed }}}
-						<span class="checkmark text-success"><i class="fa fa-check-circle"></i></span>
+						<span component="topic/endorsed-checkmark" class="checkmark text-success"><i class="fa fa-check-circle" title="An instructor endorsed this post"></i></span>
 					{{{ end }}}
 					#{increment(./index, "1")}
 				</a>
