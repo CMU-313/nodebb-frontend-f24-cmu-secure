@@ -53,9 +53,15 @@
 				</span>
 			</div>
 			{{{ end }}}
+
 			<div class="d-flex align-items-center gap-1 flex-grow-1 justify-content-end">
 				<span class="bookmarked opacity-0 text-primary"><i class="fa fa-bookmark-o"></i></span>
-				<a href="{config.relative_path}/post/{./pid}" class="post-index text-muted d-none d-md-inline">#{increment(./index, "1")}</a>
+				<a href="{config.relative_path}/post/{./pid}" class="post-index text-muted d-none d-md-inline">
+					{{{ if endorsed }}}
+						<span component="topic/endorsed-checkmark" class="checkmark text-success"><i class="fa fa-check-circle" title="An instructor endorsed this post"></i></span>
+					{{{ end }}}
+					#{increment(./index, "1")}
+				</a>
 			</div>
 		</div>
 
